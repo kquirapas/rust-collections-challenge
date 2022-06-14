@@ -13,12 +13,13 @@ badd +1 Cargo.toml
 badd +4 src/main.rs
 badd +1 ~/kquirapas/projects/rust/hashmaps/src/first.rs
 badd +2 src/second.rs
-badd +1 src/third.rs
+badd +39 src/third.rs
+badd +1 files/data.csv
 argglobal
 %argdel
-edit src/main.rs
+edit src/third.rs
 argglobal
-balt src/third.rs
+balt files/data.csv
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -29,12 +30,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 21) / 43)
+let s:l = 39 - ((38 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
-normal! 0
+keepjumps 39
+normal! 023|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

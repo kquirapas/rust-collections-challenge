@@ -1,4 +1,3 @@
-use std::io::stdin;
 
 pub fn run() {
     println!("===== SECOND =====");
